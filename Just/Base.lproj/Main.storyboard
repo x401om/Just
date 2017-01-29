@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Just" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="57h-3O-OBZ">
+                                <rect key="frame" x="8" y="20" width="359" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter article url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-uX-vO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heo-VA-T35">
+                                        <rect key="frame" x="272.5" y="0.0" width="86.5" height="30"/>
+                                        <state key="normal" title="Load"/>
+                                        <connections>
+                                            <action selector="loadButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EdI-vY-SXM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qIs-PI-Ifi"/>
+                                </constraints>
+                            </stackView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-T9-QZ6">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="57h-3O-OBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="1sx-bP-6t1"/>
+                            <constraint firstAttribute="trailing" secondItem="57h-3O-OBZ" secondAttribute="trailing" constant="8" id="3E3-aE-Xal"/>
+                            <constraint firstItem="a2x-T9-QZ6" firstAttribute="top" secondItem="57h-3O-OBZ" secondAttribute="bottom" constant="8" id="FBR-YM-hzO"/>
+                            <constraint firstItem="57h-3O-OBZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RUZ-hZ-tZI"/>
+                            <constraint firstAttribute="trailing" secondItem="a2x-T9-QZ6" secondAttribute="trailing" id="ixx-cw-dx6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a2x-T9-QZ6" secondAttribute="bottom" id="naX-fW-FPN"/>
+                            <constraint firstItem="a2x-T9-QZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uig-rr-djS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="Bzc-uX-vO4" id="f9X-OR-BPl"/>
+                        <outlet property="webView" destination="a2x-T9-QZ6" id="n5R-o9-hDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
