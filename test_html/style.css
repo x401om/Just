@@ -14,6 +14,7 @@ h3 {
   font-size: 32pt;
 }
 p {
+  margin-left: 0.5cm;
   font-size: 28pt;
 }
 blockquote {
@@ -33,4 +34,12 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+img {
+  width: 100%;
+  height: auto
+}
+video {
+  width: 100%;
+  height: auto
 }

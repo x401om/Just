@@ -12,46 +12,57 @@ import WebKit
 import BoltsSwift
 
 class ViewController: UIViewController {
-
-  @IBOutlet weak var textField: UITextField!
+  
+  var item: RSSItem? = nil
   
   weak var webView: WKWebView!
 
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    self.textField.text = "https://www.iphones.ru/iNotes/app-store-and-mobile-games"
     
-    let webView = WKWebView(frame: CGRect(x: 0, y: 60, width: 375, height: 600))
+    let webView = WKWebView(frame: self.view.bounds)
     self.view .addSubview(webView)
     self.webView = webView
     
-    let url = Bundle.main.url(forResource: "iphones", withExtension: "html");
-    do {
-      let html = try String(contentsOf: url!, encoding: String.Encoding.utf8)
-      self.webView.loadHTMLString(html, baseURL: nil)
-    } catch {
-      
+    if let item = self.item {
+      load(item: item)
     }
-//    let request = URLRequest(url: url!)
-//    self.webView.load(request)
+//    let url = Bundle.main.url(forResource: "iphones", withExtension: "html");
+//    do {
+//      let html = try String(contentsOf: url!, encoding: String.Encoding.utf8)
+//      self.webView.loadHTMLString(html, baseURL: nil)
+//    } catch {
+//      
+//    }
   }
-
-  @IBAction func loadButtonPressed(sender: UIButton) {
-    self.textField.resignFirstResponder()
-
-    let articleUrl = self.textField.text
-
-    if (articleUrl != nil) {
-      let parser = PageParser()
-      parser.fetchArticleWithUrl(urlString: articleUrl!).continueWith { task in
-        var html = task.result!
-        html = "<head><style> P {font-size: 170%;font-family: Verdana, Arial, Helvetica, sans-serif}</style></head>".appending(html)
+  
+  func load(item: RSSItem) {
+    
+    if let cssFileUrl = Bundle.main.url(forResource: "style", withExtension: "css") {
+      do {
+        let style = try String(contentsOf: cssFileUrl, encoding: String.Encoding.utf8)
+        let fullHTML = "<style>\(style)</style><h1 align=\"center\">\(item.title)</h1><div>\(item.content)</div>"
+        self.webView.loadHTMLString(fullHTML, baseURL: nil)
+      } catch {
         
-        self.webView.loadHTMLString(html, baseURL: nil)
       }
     }
   }
+
+//  @IBAction func loadButtonPressed(sender: UIButton) {
+//
+//    let articleUrl = ""
+//
+//    if (articleUrl != nil) {
+//      let parser = PageParser()
+//      parser.fetchArticleWithUrl(urlString: articleUrl).continueWith { task in
+//        var html = task.result!
+//        html = "<head><style> P {font-size: 170%;font-family: Verdana, Arial, Helvetica, sans-serif}</style></head>".appending(html)
+//        
+//        self.webView.loadHTMLString(html, baseURL: nil)
+//      }
+//    }
+//  }
 }
 

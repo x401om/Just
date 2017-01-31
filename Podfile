@@ -8,6 +8,7 @@ target 'Just' do
   pod 'Alamofire', '~> 4.3'
   pod 'Bolts-Swift'
   pod 'JASON', '~> 3.0'
+  pod 'AEXML'
   
   target 'JustTests' do
     inherit! :search_paths

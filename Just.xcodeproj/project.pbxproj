@@ -12,6 +12,8 @@
 		74D33CD91E41124B00F1B4D8 /* rss_varlamov.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CD81E41124B00F1B4D8 /* rss_varlamov.html */; };
 		74D33CDB1E41198700F1B4D8 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CDA1E41198700F1B4D8 /* style.css */; };
 		74D33CDD1E411A5200F1B4D8 /* rss_theverge.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CDC1E411A5200F1B4D8 /* rss_theverge.html */; };
+		74D33CDF1E412AD100F1B4D8 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D33CDE1E412AD100F1B4D8 /* RSSParser.swift */; };
+		74D33CE61E41379F00F1B4D8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D33CE51E41379F00F1B4D8 /* FeedViewController.swift */; };
 		74DCDA051E3DF78E00EC6B31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCDA041E3DF78E00EC6B31 /* AppDelegate.swift */; };
 		74DCDA071E3DF78E00EC6B31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCDA061E3DF78E00EC6B31 /* ViewController.swift */; };
 		74DCDA0A1E3DF78E00EC6B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCDA081E3DF78E00EC6B31 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		74D33CD81E41124B00F1B4D8 /* rss_varlamov.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rss_varlamov.html; sourceTree = "<group>"; };
 		74D33CDA1E41198700F1B4D8 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		74D33CDC1E411A5200F1B4D8 /* rss_theverge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rss_theverge.html; sourceTree = "<group>"; };
+		74D33CDE1E412AD100F1B4D8 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		74D33CE51E41379F00F1B4D8 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		74DCDA011E3DF78E00EC6B31 /* Just.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Just.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCDA041E3DF78E00EC6B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCDA061E3DF78E00EC6B31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,8 +144,10 @@
 			children = (
 				74DCDA8A1E3E837000EC6B31 /* test_html */,
 				74DCDA041E3DF78E00EC6B31 /* AppDelegate.swift */,
+				74D33CE51E41379F00F1B4D8 /* FeedViewController.swift */,
 				74DCDA061E3DF78E00EC6B31 /* ViewController.swift */,
 				74DCDA341E3DFD2E00EC6B31 /* PageParser.swift */,
+				74D33CDE1E412AD100F1B4D8 /* RSSParser.swift */,
 				74DCDA081E3DF78E00EC6B31 /* Main.storyboard */,
 				74DCDA0B1E3DF78E00EC6B31 /* Assets.xcassets */,
 				74DCDA0D1E3DF78E00EC6B31 /* LaunchScreen.storyboard */,
@@ -288,6 +294,7 @@
 					74DCDA001E3DF78E00EC6B31 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EMUSKVZ7GP;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					74DCDA141E3DF78E00EC6B31 = {
@@ -507,7 +514,9 @@
 			files = (
 				74DCDA351E3DFD2E00EC6B31 /* PageParser.swift in Sources */,
 				74DCDA071E3DF78E00EC6B31 /* ViewController.swift in Sources */,
+				74D33CE61E41379F00F1B4D8 /* FeedViewController.swift in Sources */,
 				74DCDA051E3DF78E00EC6B31 /* AppDelegate.swift in Sources */,
+				74D33CDF1E412AD100F1B4D8 /* RSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,11 +669,13 @@
 			baseConfigurationReference = DE00E8A404771B227C805C97 /* Pods-Just.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EMUSKVZ7GP;
 				INFOPLIST_FILE = Just/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JT.Just;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -674,6 +685,7 @@
 			baseConfigurationReference = 39B3E7536435F88AD82AC201 /* Pods-Just.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EMUSKVZ7GP;
 				INFOPLIST_FILE = Just/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
