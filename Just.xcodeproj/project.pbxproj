@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06BFB47018A5D6AD54691900 /* Pods_JustTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083E765EAB8C37B617156FCC /* Pods_JustTests.framework */; };
+		74D33CD71E410E0A00F1B4D8 /* rss_hinews.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CD61E410E0A00F1B4D8 /* rss_hinews.html */; };
+		74D33CD91E41124B00F1B4D8 /* rss_varlamov.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CD81E41124B00F1B4D8 /* rss_varlamov.html */; };
+		74D33CDB1E41198700F1B4D8 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CDA1E41198700F1B4D8 /* style.css */; };
+		74D33CDD1E411A5200F1B4D8 /* rss_theverge.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D33CDC1E411A5200F1B4D8 /* rss_theverge.html */; };
 		74DCDA051E3DF78E00EC6B31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCDA041E3DF78E00EC6B31 /* AppDelegate.swift */; };
 		74DCDA071E3DF78E00EC6B31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCDA061E3DF78E00EC6B31 /* ViewController.swift */; };
 		74DCDA0A1E3DF78E00EC6B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCDA081E3DF78E00EC6B31 /* Main.storyboard */; };
@@ -51,6 +55,10 @@
 		526E0D05E1241C050BEE78BD /* Pods-JustUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustUITests/Pods-JustUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5854E55FFC97633366ED9585 /* Pods-JustUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustUITests/Pods-JustUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5D16C8C35448C2850B59FFC8 /* Pods-JustTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustTests/Pods-JustTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74D33CD61E410E0A00F1B4D8 /* rss_hinews.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rss_hinews.html; sourceTree = "<group>"; };
+		74D33CD81E41124B00F1B4D8 /* rss_varlamov.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rss_varlamov.html; sourceTree = "<group>"; };
+		74D33CDA1E41198700F1B4D8 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		74D33CDC1E411A5200F1B4D8 /* rss_theverge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = rss_theverge.html; sourceTree = "<group>"; };
 		74DCDA011E3DF78E00EC6B31 /* Just.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Just.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCDA041E3DF78E00EC6B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCDA061E3DF78E00EC6B31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		74DCDA8A1E3E837000EC6B31 /* test_html */ = {
 			isa = PBXGroup;
 			children = (
+				74D33CDA1E41198700F1B4D8 /* style.css */,
 				74DCDA8D1E3E83D700EC6B31 /* appleinsider.html */,
 				74DCDA8E1E3E83D700EC6B31 /* iphones.html */,
 				74DCDA8F1E3E83D700EC6B31 /* meduza.html */,
@@ -170,6 +179,9 @@
 				74DCDA911E3E83D700EC6B31 /* theverge.html */,
 				74DCDA921E3E83D700EC6B31 /* varlamov.html */,
 				74DCDA931E3E83D700EC6B31 /* vox.html */,
+				74D33CD61E410E0A00F1B4D8 /* rss_hinews.html */,
+				74D33CD81E41124B00F1B4D8 /* rss_varlamov.html */,
+				74D33CDC1E411A5200F1B4D8 /* rss_theverge.html */,
 			);
 			name = test_html;
 			path = ../test_html;
@@ -320,11 +332,15 @@
 				74DCDA971E3E83D700EC6B31 /* techcrunch.html in Resources */,
 				74DCDA961E3E83D700EC6B31 /* meduza.html in Resources */,
 				74DCDA9A1E3E83D700EC6B31 /* vox.html in Resources */,
+				74D33CD91E41124B00F1B4D8 /* rss_varlamov.html in Resources */,
 				74DCDA981E3E83D700EC6B31 /* theverge.html in Resources */,
 				74DCDA941E3E83D700EC6B31 /* appleinsider.html in Resources */,
 				74DCDA991E3E83D700EC6B31 /* varlamov.html in Resources */,
+				74D33CDD1E411A5200F1B4D8 /* rss_theverge.html in Resources */,
+				74D33CD71E410E0A00F1B4D8 /* rss_hinews.html in Resources */,
 				74DCDA951E3E83D700EC6B31 /* iphones.html in Resources */,
 				74DCDA0F1E3DF78E00EC6B31 /* LaunchScreen.storyboard in Resources */,
+				74D33CDB1E41198700F1B4D8 /* style.css in Resources */,
 				74DCDA0C1E3DF78E00EC6B31 /* Assets.xcassets in Resources */,
 				74DCDA0A1E3DF78E00EC6B31 /* Main.storyboard in Resources */,
 			);
